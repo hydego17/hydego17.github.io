@@ -37,12 +37,47 @@ a{
 }
 
 #navbar ul li{
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.2rem;
+    
 }
 
 #navbar ul li a{
     color: rgb(240, 240, 240);
 }
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+/* Effect */
+.effect a::before,
+.effect a::after {
+	display: inline-block;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.effect a::before {
+	margin-right: 5px;
+	content: '[';
+	transform: translateX(10px);
+}
+
+.effect a::after {
+	margin-left: 5px;
+	content: ']';
+	transform: translateX(-10px);
+}
+
+.effect a:hover::before,
+.effect a:hover::after,
+.effect a:focus::before,
+.effect a:focus::after {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
 
 /* welcome section */
 
@@ -61,6 +96,10 @@ h1{
     margin: 1rem;
 }
 
+#desc{
+    margin: 1em 0 2em 0;
+}
+
 #links {
     padding: 1rem 0;
     display: flex;
@@ -71,8 +110,43 @@ h1{
     padding-right: 0.5rem;
 }
 
-#links a{
-    padding: 1rem 2rem;
+
+.effect2 a, .effect2 p {
+	overflow: hidden;
+	padding: 0 2rem;
+}
+
+.effect2 a span, .effect2 p span{
+	position: relative;
+	display: inline-block;
+	transition: transform 0.3s;
+}
+.effect2 p span::before{
+    position: absolute;
+	top: 100%;
+    content: attr(data-hover);
+    font-weight: 600;
+	color: rgb(0, 255, 64);
+	transform: translate3d(0,0,0);
+}
+
+.effect2 a span::before{
+	position: absolute;
+	top: 100%;
+    content: attr(data-hover);
+    font-weight: 600;
+	color: rgb(0, 174, 255);
+	transform: translate3d(0,0,0);
+}
+
+.effect2 a:hover span,
+.effect2 a:focus span {
+	transform: translateY(-100%);
+}
+
+.effect2 p:hover span,
+.effect2 p:focus span {
+	transform: translateY(-100%);
 }
 
 @media (max-width: 590px){
@@ -87,7 +161,7 @@ h1{
     }
 
     #links a{
-        padding: 0.5rem 0;
+        margin: 0.8rem 0;
     }
 }
 
