@@ -37,7 +37,7 @@ a{
 }
 
 #navbar ul li{
-    padding: 1.2rem 1.2rem;
+    padding: 1.2rem 1.5rem 1.2rem 0;
     
 }
 
@@ -50,7 +50,7 @@ nav a:focus {
 	outline: none;
 }
 
-/* Effect */
+/* Hover Effect */
 .effect a::before,
 .effect a::after {
 	display: inline-block;
@@ -110,13 +110,44 @@ h1{
     padding-right: 0.5rem;
 }
 
+/* Hover effect2  */
 
 .effect2 a, .effect2 p {
+    height: 1.25em;
 	overflow: hidden;
 	padding: 0 2rem;
 }
 
-.effect2 a span, .effect2 p span{
+.effect2 p span{
+    position: relative;
+    display: inline-block;
+    animation: flip 7s 2s ease-in-out infinite;
+}
+
+@keyframes flip{
+    0%{
+        transform: translateY(0);
+    }
+
+    10%{
+        transform: translateY(-105%);
+    }
+
+    25%{
+        transform: translateY(-105%);
+    }
+    50%{
+        transform: translateY(-105%);
+    }
+    60%{
+        transform: translateY(0)
+    }
+    100%{
+        transform: translateY(0)
+    }
+}
+
+.effect2 a span{
 	position: relative;
 	display: inline-block;
 	transition: transform 0.3s;
@@ -125,8 +156,8 @@ h1{
     position: absolute;
 	top: 100%;
     content: attr(data-hover);
-    font-weight: 600;
-	color: rgb(0, 255, 64);
+    font-weight: bolder;
+	color: rgb(255, 217, 0);
 	transform: translate3d(0,0,0);
 }
 
@@ -143,11 +174,7 @@ h1{
 .effect2 a:focus span {
 	transform: translateY(-100%);
 }
-
-.effect2 p:hover span,
-.effect2 p:focus span {
-	transform: translateY(-100%);
-}
+/* ----------------------------------- */
 
 @media (max-width: 590px){
     h1{
@@ -207,7 +234,7 @@ h1{
     background: rgba(238, 238, 238);
     color: #f1f1f1; 
     width: 100%;
-    transition: .5s ease-in-out;
+    transition: .3s ease-out;
     opacity:0;
     color: rgb(26, 26, 26);
     font-size: 1rem;
@@ -215,7 +242,7 @@ h1{
     text-align: center;
   }
   .project-tile:hover .img{
-      transform: scale(1.02);
+      transform: translateY(-2%);
   }
   .project-tile:hover .overlay {
     opacity: 1;
