@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Lexend Deca', sans-serif;
 }
 
-a{
+a {
     color: #fff;
     text-decoration: none;
 }
 
 /* Menus */
 
-#navbar{
+#navbar {
     width: 100%;
     position: fixed;
     top: 0;
@@ -30,59 +30,59 @@ a{
 }
 
 
-#navbar ul{
+#navbar ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-#navbar ul li{
+#navbar ul li {
     padding: 1.2rem 1.5rem 1.2rem 0;
-    
+
 }
 
-#navbar ul li a{
+#navbar ul li a {
     color: rgb(240, 240, 240);
 }
 
 nav a:hover,
 nav a:focus {
-	outline: none;
+    outline: none;
 }
 
 /* Hover Effect */
 .effect a::before,
 .effect a::after {
-	display: inline-block;
-	opacity: 0;
-	transition: transform 0.3s, opacity 0.2s;
+    display: inline-block;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
 }
 
 .effect a::before {
-	margin-right: 5px;
-	content: '[';
-	transform: translateX(10px);
+    margin-right: 5px;
+    content: '[';
+    transform: translateX(10px);
 }
 
 .effect a::after {
-	margin-left: 5px;
-	content: ']';
-	transform: translateX(-10px);
+    margin-left: 5px;
+    content: ']';
+    transform: translateX(-10px);
 }
 
 .effect a:hover::before,
 .effect a:hover::after,
 .effect a:focus::before,
 .effect a:focus::after {
-	opacity: 1;
-	transform: translateX(0px);
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 
 /* welcome section */
 
-#welcome-section{
+#welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,20 +93,20 @@ nav a:focus {
     color: rgb(241, 241, 241);
 }
 
-.hide{
-    background:  rgb(20, 20, 20);
+.hide {
+    background: rgb(20, 20, 20);
     overflow: hidden;
     margin: 1rem 0;
 }
 
 
 
-.hide .roll{
+.hide .roll {
     transform: translateY(100%);
     display: inline-block;
 }
 
-h1{
+h1 {
     margin-bottom: 1rem;
 }
 
@@ -117,113 +117,121 @@ h1{
     justify-content: center;
 }
 
-#links a{
+#links a {
     margin: -2.5px 0;
 }
 
-.fab{
+.fab {
     padding-right: 0.5rem;
 }
 
 /* Hover effect2  */
 
-.effect2 a, .effect2 p {
-	overflow: hidden;
-	padding: 0 2rem;
+.effect2 a,
+.effect2 p {
+    overflow: hidden;
+    padding: 0 2rem;
 }
 
-.effect2 p span{
+.effect2 p span {
     position: relative;
     display: inline-block;
     animation: flip 7s 4s ease-in-out infinite;
 }
 
-@keyframes flip{
-    0%{
+@keyframes flip {
+    0% {
         transform: translateY(0);
     }
 
-    10%{
+    10% {
         transform: translateY(-105%);
     }
 
-    25%{
+    25% {
         transform: translateY(-105%);
     }
-    50%{
+
+    50% {
         transform: translateY(-105%);
     }
-    60%{
+
+    60% {
         transform: translateY(0)
     }
-    100%{
+
+    100% {
         transform: translateY(0)
     }
 }
 
-.effect2 a span{
-	position: relative;
-	display: inline-block;
-	transition: transform 0.3s;
+.effect2 a span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s;
 }
-.effect2 p span::before{
+
+.effect2 p span::before {
     position: absolute;
-	top: 100%;
+    top: 100%;
     content: attr(data-hover);
     font-weight: bolder;
-	color: rgb(255, 217, 0);
-	transform: translate3d(0,0,0);
+    color: rgb(255, 217, 0);
+    transform: translate3d(0, 0, 0);
 }
 
-.effect2 a span::before{
-	position: absolute;
-	top: 100%;
+.effect2 a span::before {
+    position: absolute;
+    top: 100%;
     content: attr(data-hover);
     font-weight: 600;
-	color: rgb(0, 174, 255);
-	transform: translate3d(0,0,0);
+    color: rgb(0, 174, 255);
+    transform: translate3d(0, 0, 0);
 }
 
 .effect2 a:hover span,
 .effect2 a:focus span {
-	transform: translateY(-100%);
+    transform: translateY(-100%);
 }
+
 /* ----------------------------------- */
 
-@media (max-width: 590px){
-    #h1{
+@media (max-width: 590px) {
+    #h1 {
         margin-top: 4rem;
     }
 
-    #desc{
+    #desc {
         margin-bottom: -1px;
     }
-    #links{
+
+    #links {
         text-align: center;
         flex-direction: column;
         margin-top: 2rem;
     }
-    #links a{
+
+    #links a {
         margin: -3px 0;
     }
-    
+
 }
 
 /* Projects section */
 
-#projects{
+#projects {
     padding: 8rem 2rem;
     width: 100%;
     background-color: rgb(207, 207, 207);
     text-align: center;
 }
 
-#projects h1{
+#projects h1 {
     font-size: 2rem;
     margin: 0 auto 6rem auto;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
@@ -232,7 +240,7 @@ h1{
     margin-bottom: 6rem;
 }
 
-.img{
+.img {
     border-radius: 5px;
     border: 4px solid rgb(236, 236, 236);
     height: 100%;
@@ -241,28 +249,48 @@ h1{
     transition: transform 1s ease;
 }
 
-.project-tile{
+.project-tile {
     position: relative;
 }
 
 .overlay {
-    position: absolute; 
-    bottom: 0; 
+    position: absolute;
+    bottom: 0;
     background: rgba(238, 238, 238);
-    color: #f1f1f1; 
+    color: #f1f1f1;
     width: 100%;
     transition: .3s ease-out;
-    opacity:0;
+    opacity: 0;
     color: rgb(26, 26, 26);
     font-size: 1rem;
     padding: 1rem;
     text-align: center;
-  }
-  .project-tile:hover .img{
-      transform: translateY(-2%);
-  }
-  .project-tile:hover .overlay {
-    opacity: 1;
-  }
+}
 
-  
+.project-tile:hover .img {
+    transform: translateY(-2%);
+}
+
+.project-tile:hover .overlay {
+    opacity: 1;
+}
+
+footer {
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    background: #000000;
+    color: #868686;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#copyright {
+    font-size: 0.75rem;
+}
+
+#footer p {
+    margin: 0.5rem 0;
+
+}
