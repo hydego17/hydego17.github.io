@@ -277,7 +277,7 @@ h1 {
 
 footer {
     font-size: 0.8rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background: #000000;
     color: #868686;
     text-align: center;
@@ -290,7 +290,6 @@ footer {
     font-size: 0.75rem;
 }
 
-#footer p {
-    margin: 0.5rem 0;
-
+#bye{
+    padding-top: -5px;
 }
