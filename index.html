@@ -16,24 +16,34 @@
 <body>
     <nav class="effect" id="navbar">
         <ul>
-            <li><a href="#welcome-section">About</a></li>
-            <li><a href="#projects">Work</a></li>
+            <li class="roll"><a href="#welcome-section">About</a></li>
+            <li class="roll"><a href="#projects">Work</a></li>
         </ul>
     </nav>
 
     <section id="welcome-section">
-        <h1> Hi, I'm Umma Ahimsha</h1>
-        <div class="effect2">
-                 <p id="desc">a Web <span data-hover="Designer">Developer</span></p>
+
+        <h1 class="hide"> <span id="h1" class="text roll">Hi, I'm Umma Ahimsha</span></h1>
+
+
+        <div class="effect2 hide">
+            <p id="desc" class="text roll">a Web <span data-hover="Designer">Developer</span></p>
         </div>
-        <nav class="effect2" id="links">
-            <a href="https://twitter.com/umma_ahimsha" target="_blank"><i class="fab fa-twitter"></i><span
-                    data-hover="@umma_ahimsha">@umma_ahimsha</span></a>
 
-            <a href="https://github.com/hydego17" target="_blank"><i class="fab fa-github"></i><span data-hover="hydego17">hydego17</span></a>
+        <nav class="effect2 " id="links">
+            <div class="hide">
+                <a class="text roll" href="https://twitter.com/umma_ahimsha" target="_blank"><i
+                        class="fab fa-twitter"></i><span data-hover="@umma_ahimsha">@umma_ahimsha</span></a>
+            </div>
+            <div class="hide">
+                <a class="text roll" href="https://github.com/hydego17" target="_blank"><i
+                        class="fab fa-github"></i><span data-hover="hydego17">hydego17</span></a>
+            </div>
+            <div class="hide">
 
-            <a href="https://forum.freecodecamp.org/u/hydego17/summary" target="_blank"><i
-                    class="fab fa-free-code-camp"></i><span data-hover="hydego17">hydego17</span> </a>
+                <a class="text roll" href="https://forum.freecodecamp.org/u/hydego17/summary" target="_blank"><i
+                        class="fab fa-free-code-camp"></i><span data-hover="hydego17">hydego17</span> </a>
+            </div>
         </nav>
     </section>
 
@@ -72,6 +82,9 @@
     </section>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 
