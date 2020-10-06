@@ -224,6 +224,13 @@ h1 {
   transform: translate3d(0, 0, 0);
 }
 
+.effect2 a span.dribble::before {
+  color: #ea4c89;
+}
+.effect2 a span.github::before {
+  color: #00a043;
+}
+
 .effect2 a:hover span,
 .effect2 a:focus span {
   transform: translateY(-100%);
